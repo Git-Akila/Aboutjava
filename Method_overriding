@@ -1,0 +1,31 @@
+class user{
+     String name;
+     int age;
+     user(String n,int a){
+         this.name=n;
+         this.age=a;
+     }
+     public void display(){
+         System.out.println("Name:"+name);
+         System.out.println("Age:"+age);
+     }
+
+ }class mainprogram extends user{
+     String company_name;
+     mainprogram(String n,int a,String c){
+         super(n,a);
+         this.company_name=c;
+     }
+     @Override
+     public void display(){
+         System.out.println("Name:"+name);
+         System.out.println("Age:"+age);
+         System.out.println("Company name:"+company_name);
+     }
+}
+class Method_overriding{
+     public static void main(String args[]){
+         mainprogram o=new mainprogram("Aki",22,"Aki-aki");
+         o.display();
+     }
+}
